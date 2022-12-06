@@ -94,7 +94,6 @@ const Footer = () => {
           <p className="text-gray-500 dark:text=gray-200 text-sm text-center sm:text-left">
             &copy; 2022 Golam rabbi —
             <NavLink
-              href="https://twitter.com/knyttneve"
               className="text-gray-600 dark:text-gray-300 ml-1"
               target="_blank"
               rel="noopener noreferrer"
