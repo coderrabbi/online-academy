@@ -101,9 +101,6 @@ const Footer = () => {
               @golamRabbi
             </NavLink>
           </p>
-          <span className="sm:ml-auto sm:mt-0 mt-2 sm:w-auto w-full sm:text-left text-center text-gray-500 text-sm">
-            Enamel pin tousled raclette tacos irony
-          </span>
         </div>
       </div>
     </footer>

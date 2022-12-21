@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const RightSideNav = () => {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
-    fetch("https://online-course-server-ten.vercel.app/courses-categories")
+    fetch(`${process.env.REACT_APP_SERVER_BASE_URL}/courses-categories`)
       .then((res) => res.json())
       .then((data) => setCategories(data));
   }, []);
@@ -15,7 +15,10 @@ const RightSideNav = () => {
         All Categories
       </h1>
       {categories.map((category) => (
-        <NavLink to={`/category/${category.id}`} className="text-blue-600">
+        <NavLink
+          to={`/category/${category.id}`}
+          className="text-blue-600 dark:text-blue-200"
+        >
           {category.name}
         </NavLink>
       ))}

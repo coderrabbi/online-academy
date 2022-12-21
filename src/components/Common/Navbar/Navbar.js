@@ -109,7 +109,7 @@ const Navbar = () => {
               </NavLink>
             </li>
             {user?.uid ? (
-              <div className="dropdown dropdown-end dropdown-hover">
+              <div className="dropdown z-10 dropdown-end dropdown-hover">
                 <label tabIndex={0} className="cursor-pointer ">
                   <img
                     src={
@@ -125,8 +125,13 @@ const Navbar = () => {
                   tabIndex={0}
                   className="dropdown-content menu p-2 shadow bg-base-100 dark:bg-slate-700 rounded-box w-52"
                 >
-                  <button className="dark:text-slate-200  dark:hover:bg-sky-900 hover:bg-gray-300 py-2 px-3 rounded mb-2 text-slate-700">
-                    <NavLink to="/user">{user.displayName}</NavLink>
+                  <button className="dark:text-slate-200  dark:hover:bg-gray-900 hover:bg-gray-300 py-2 px-3 rounded mb-2 hover:text-slate-700">
+                    <NavLink
+                      to="/user"
+                      className=" dark:hover:text-white hover:text-slate-700"
+                    >
+                      {user.displayName}
+                    </NavLink>
                   </button>
                   <li>
                     <button
